@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprunki Phase 3 - Create Your Own Musical Masterpiece | Interactive Music Game</title>
+    <meta name="description" content="Play Sprunki Phase 3, the innovative music-making game where creativity meets rhythm. Create unique beats, mix sounds, and share your musical masterpieces. Try it now!">
+    <meta name="keywords" content="Sprunki Phase 3, music game, rhythm game, interactive music, beat maker, musical composition">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #4f46e5;
+            --text-color: #1f2937;
+            --bg-color: #ffffff;
+            --accent-color: #8b5cf6;
+            --section-bg: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Game Section Styles */
+        .game-section {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 2rem 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .game-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-header p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .game-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 0;
+            padding-bottom: 56.25%;
+            margin: 0 auto;
+        }
+
+        .game-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .fullscreen-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
+
+        .fullscreen-button:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Content Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--section-bg);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .game-header h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="game-section">
+        <div class="game-header">
+            <h1>Welcome to Sprunki Phase 3</h1>
+            <p>Create amazing music by combining different sounds and rhythms. Click the fullscreen button for the best experience!</p>
+        </div>
+        <div class="game-container">
+            <button class="fullscreen-button" id="fullscreenBtn">
+                ⛶ Fullscreen
+            </button>
+            <iframe src="https://wowtbc.net/sprunki/phase-3/index.html" class="game-frame" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <main>
+        <section id="features">
+            <div class="container">
+                <h2>Key Features of Sprunki Phase 3</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Intuitive Controls</h3>
+                        <p>Simple drag-and-drop interface makes music creation accessible to everyone, regardless of musical experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Rich Sound Library</h3>
+                        <p>Access a diverse collection of high-quality sounds, beats, and musical elements to create your perfect mix.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Real-time Mixing</h3>
+                        <p>Experience immediate feedback as you layer different sounds and create complex musical arrangements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-play">
+            <div class="container">
+                <h2>How to Play Sprunki Phase 3</h2>
+                <h3>Game Rules</h3>
+                <p>Playing Sprunki Phase 3 is intuitive and engaging. Follow these simple steps to start creating your musical masterpiece:</p>
+                <ol>
+                    <li>Select characters from the available roster, each representing unique sounds and beats</li>
+                    <li>Drag and drop characters onto the stage to activate their sounds</li>
+                    <li>Layer multiple characters to create complex musical arrangements</li>
+                    <li>Experiment with different combinations to discover unique sound patterns</li>
+                    <li>Record your creation and share it with the community</li>
+                </ol>
+                
+                <h3>Scoring System</h3>
+                <p>Sprunki Phase 3 features a dynamic scoring system that rewards creativity and musical harmony:</p>
+                <ul>
+                    <li>Earn points for creating balanced compositions</li>
+                    <li>Unlock bonus points by discovering special sound combinations</li>
+                    <li>Gain additional score multipliers for maintaining rhythm consistency</li>
+                    <li>Achieve higher rankings by creating longer, more complex arrangements</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="tips">
+            <div class="container">
+                <h2>Pro Tips for Sprunki Phase 3</h2>
+                <p>Master the art of musical creation with these expert tips:</p>
+                <ul>
+                    <li>Start with a strong baseline to establish your rhythm</li>
+                    <li>Gradually layer complementary sounds to build complexity</li>
+                    <li>Pay attention to the visual feedback for timing cues</li>
+                    <li>Experiment with different character combinations to discover hidden melodies</li>
+                    <li>Use the practice mode to perfect your timing and transitions</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sprunki Phase 3. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameFrame = document.querySelector('.game-frame');
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+            // Handle fullscreen
+            fullscreenBtn.addEventListener('click', function() {
+                if (gameFrame.requestFullscreen) {
+                    gameFrame.requestFullscreen();
+                } else if (gameFrame.mozRequestFullScreen) {
+                    gameFrame.mozRequestFullScreen();
+                } else if (gameFrame.webkitRequestFullscreen) {
+                    gameFrame.webkitRequestFullscreen();
+                } else if (gameFrame.msRequestFullscreen) {
+                    gameFrame.msRequestFullscreen();
+                }
+            });
+
+            // Update fullscreen button text based on fullscreen state
+            document.addEventListener('fullscreenchange', updateFullscreenButtonText);
+            document.addEventListener('webkitfullscreenchange', updateFullscreenButtonText);
+            document.addEventListener('mozfullscreenchange', updateFullscreenButtonText);
+            document.addEventListener('MSFullscreenChange', updateFullscreenButtonText);
+
+            function updateFullscreenButtonText() {
+                if (document.fullscreenElement || 
+                    document.webkitFullscreenElement || 
+                    document.mozFullScreenElement ||
+                    document.msFullscreenElement) {
+                    fullscreenBtn.textContent = '⮌ Exit Fullscreen';
+                } else {
+                    fullscreenBtn.textContent = '⛶ Fullscreen';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
