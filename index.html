@@ -85,24 +85,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .fullscreen-button {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            z-index: 10;
-            transition: background-color 0.3s ease;
-        }
-
-        .fullscreen-button:hover {
-            background: var(--secondary-color);
-        }
-
         /* Content Sections */
         section {
             padding: 4rem 0;
@@ -183,9 +165,6 @@
             <p>Create amazing music by combining different sounds and rhythms. Click the fullscreen button for the best experience!</p>
         </div>
         <div class="game-container">
-            <button class="fullscreen-button" id="fullscreenBtn">
-                ⛶ Fullscreen
-            </button>
             <iframe src="https://wowtbc.net/sprunki/phase-3/index.html" class="game-frame" allowfullscreen></iframe>
         </div>
     </section>
@@ -259,37 +238,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const gameFrame = document.querySelector('.game-frame');
-            const fullscreenBtn = document.getElementById('fullscreenBtn');
-
-            // Handle fullscreen
-            fullscreenBtn.addEventListener('click', function() {
-                if (gameFrame.requestFullscreen) {
-                    gameFrame.requestFullscreen();
-                } else if (gameFrame.mozRequestFullScreen) {
-                    gameFrame.mozRequestFullScreen();
-                } else if (gameFrame.webkitRequestFullscreen) {
-                    gameFrame.webkitRequestFullscreen();
-                } else if (gameFrame.msRequestFullscreen) {
-                    gameFrame.msRequestFullscreen();
-                }
-            });
-
-            // Update fullscreen button text based on fullscreen state
-            document.addEventListener('fullscreenchange', updateFullscreenButtonText);
-            document.addEventListener('webkitfullscreenchange', updateFullscreenButtonText);
-            document.addEventListener('mozfullscreenchange', updateFullscreenButtonText);
-            document.addEventListener('MSFullscreenChange', updateFullscreenButtonText);
-
-            function updateFullscreenButtonText() {
-                if (document.fullscreenElement || 
-                    document.webkitFullscreenElement || 
-                    document.mozFullScreenElement ||
-                    document.msFullscreenElement) {
-                    fullscreenBtn.textContent = '⮌ Exit Fullscreen';
-                } else {
-                    fullscreenBtn.textContent = '⛶ Fullscreen';
-                }
-            }
         });
     </script>
 </body>
